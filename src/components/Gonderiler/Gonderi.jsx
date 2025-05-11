@@ -16,7 +16,7 @@ const Gonderi = (props) => {
         thumbnailUrl={gonderi.thumbnailUrl}
       />
       <div className="post-image-wrapper">
-        <img
+        <img 
           alt="post thumbnail"
           className="post-image"
           src={gonderi.imageUrl}
