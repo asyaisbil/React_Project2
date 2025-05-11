@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-/* 
-ADIM 1: gerekli componentleri ve sahteVeri'yi import edin 
-*/
+import AramaCubugu from './components/AramaCubugu/AramaCubugu.jsx';
+import Gonderiler from './components/Gonderiler/Gonderiler.jsx';
+import sahteVeri from './sahteVeri.js';
 
 const App = () => {
   const [gonderiler, setGonderiler] = useState(sahteVeri);
@@ -38,10 +38,8 @@ const App = () => {
 
   return (
     <div className="App">
-      {/*
-        ADIM 2: AramaCubugu ve Gonderiler component'ini ekleyin.
-        Önce bu comoponentleri inceleyin. Hangi proplara ihtiyacı var?
-        */}
+      <AramaCubugu aramaKriteri={aramaKriteri} aramaHandler={aramaHandler} />
+      <Gonderiler gonderiler={gonderiler} gonderiyiBegen={gonderiyiBegen} />
     </div>
   );
 };

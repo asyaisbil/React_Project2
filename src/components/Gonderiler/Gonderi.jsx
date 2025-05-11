@@ -6,6 +6,9 @@ import GonderiBasligi from './GonderiBasligi';
 const Gonderi = (props) => {
   const { gonderi, gonderiyiBegen } = props;
 
+  
+
+  /* ADIM 3: Gönderiyi beğen fonksiyonu bu component'e geliyor ama beğeni sayısı hem yanlış(sahtaVeri'den bakılabilir) hem de artmıyor. problemler neler olabilir? İpucu: BegenBolumu component'ine ve gonderiyiBegen fonksiyona bakabilirsin*/
   return (
     <div className="post-border">
       <GonderiBasligi
@@ -19,10 +22,7 @@ const Gonderi = (props) => {
           src={gonderi.imageUrl}
         />
       </div>
-      <BegenBolumu
-        gonderiyiBegen={() => gonderiyiBegen(gonderi.id)}
-        begeniSayisi={gonderi.likes}
-      />
+      <BegenBolumu begeniSayisi={gonderi.likes} gonderiyiBegen = {gonderiyiBegen}  gonderi = {gonderi.id}/>
       <Yorumlar yorumlar={gonderi.comments} />
     </div>
   );

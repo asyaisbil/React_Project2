@@ -9,23 +9,16 @@ import {
 import './AramaCubugu.css';
 
 const AramaCubugu = (props) => {
-  const { aramaKriteri, aramaHandler } = props;
+  const {aramaKriteri, aramaHandler} = props;
 
-  const changeHandler = (event) => {
-    aramaHandler(event.target.value);
-  };
   return (
     <div className="search-bar-wrapper">
       <div className="social">
         <FontAwesomeIcon icon={faInstagram} />
       </div>
       <form className="search-form">
-        <input
-          type="text"
-          placeholder="Arama"
-          value={aramaKriteri}
-          onChange={changeHandler}
-        />
+        <input type="text" placeholder="Arama" value = {aramaKriteri} onChange ={aramaHandler}/>{' '}
+        {/* ADIM 4: input alanındak, value ve hangi event'i dinleyeceksen ona göre gelen propları burada kullanabilirsin. */}
       </form>
       <div className="social-wrapper">
         <div className="social">
