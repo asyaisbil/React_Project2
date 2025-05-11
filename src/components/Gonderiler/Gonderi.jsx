@@ -28,4 +28,4 @@ const Gonderi = (props) => {
   );
 };
 
-export default Gonderi;
+export default Gonderi; 
